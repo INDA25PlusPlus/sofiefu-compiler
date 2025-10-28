@@ -1,13 +1,14 @@
-The syntax of my language (that is very similar to python) in Backus-Naur Form
+The syntax of my language in Backus-Naur Form
 
-<while> ::= "while" <variable> <comparator> <variable> 
+<while> ::= "while " <comparison>
+<comparison> ::= <addition> " " <comparator> " " <addition> 
 
-<print> ::= "print" "(" <variable> ")"
-<assignment> ::= <variable> "=" <addition> 
-<addition> ::= <term> | <term> "+" <term>
+<print> ::= "print " <addition>
+<assignment> ::= <variable> " = " <addition> 
+<addition> ::= <term> | <term> " + " <term>
 <term> ::= <number> | <variable>
 
 <number> ::= [1-9][0-9]*
 <variable> ::= [A-Za-z_]+
-<comparator> ::= "<" 
+<comparator> ::= "<" | "==" | ">"
 
